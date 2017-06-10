@@ -1,6 +1,3 @@
-/**
- * Created by Vovka on 23.02.2017.
- */
 function Circle()
 {
     Shape.apply(this, arguments);
@@ -19,22 +16,28 @@ function Circle()
     {
         this.centerY = centerY;
     };
+    this.getFillColor = function()
+    {
+        return this.fillColor
+    }
+    this.getBorderColor = function()
+    {
+        return this.borderColor
+    }
 }
 
 Circle.prototype = Object.create(Animal.prototype);
 
-Circle.prototype.draw = function(ctx, radius, centerX, centerY)
+Circle.prototype.draw = function(ctx)
 {
-    this.setRadius(radius);
-    this.setCenterX(centerX);
-    this.setCenterY(centerY);
     ctx.beginPath();
-    ctx.arc(this.centerX, this.centerY, this.radius, 0, 2* Math_PI, false);
-    ctx.fillStyle = this.fillColor;
-    ctx.strokeStyle = this.borderColor;
-    ctx.lineWidth = 5;
+    ctx.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = this.getFillColor();
     ctx.fill();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = this.getBorderColor();
     ctx.stroke();
+    ctx.closePath();
 };
 
 Circle.prototype.calculatePerimeter = function()

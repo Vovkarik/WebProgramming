@@ -1,0 +1,81 @@
+.container
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.form
+{
+    width: 300px;
+    float: left;
+    background: #66f;
+    margin-top: 50px;
+}
+
+.form-item
+{
+    margin: 20px auto 0;
+    width: 280px;
+
+}
+
+.form select, input
+{
+    width: 280px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.circle-settings, .triangle-settings, .rectangle-settings
+{
+    margin: 0 auto;
+    display: none;
+}
+
+.triangle-settings:last-child .point, .rectangle-settings:last-child .point
+{
+    margin-left: 10px;
+}
+
+.point
+{
+    margin: 0 auto;
+    width: 280px;
+}
+
+.triangle-settings input, .rectangle-settings input
+{
+    width: 100px;
+}
+
+.circle-settings
+{
+    display: block;
+}
+
+.basic-settings:last-child
+{
+    margin-bottom: 30px;
+}
+
+.info
+{
+    width: 280px;
+    margin: 20px auto 0;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.draw-area
+{
+    float: left;
+    width: 900px;
+    height: 600px;
+    background: #333;
+}
+
+.draw-area .canvas
+{
+    margin: 25px 25px;
+    background: #fff;
+}

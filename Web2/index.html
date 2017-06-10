@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CanvasOOP</title>
-    <script src="Shape.js"></script>
-</head>
-<body>
-    <canvas id="myCanvas"></canvas>
-</body>
+<html>
+    <head>
+        <title>Web2</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <form class="settings" id="settings-form">
+                    <div class="form-item">
+                        <label>Выберете фигуру
+                            <select id="current-shape">
+                                <option value="circle">Circle</option>
+                                <option value="triangle">Triangle</option>
+                                <option value="rectangle">Rectangle</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>Введите HEX цвет фигуры
+                            <input type="text" id="shape-fill-color" />
+                        </label>
+                        <label>Введите HEX цвет границы фигуры
+                            <input type="text" id="shape-border-color" />
+                        </label>
+                    </div>
+                    <div class="form-item">
+                       <div class="circle-settings" id="circle-block">
+                           <label>Радиус
+                                <input type="text" id="radius" />
+                            </label>
+                            <label>Позиция по Х
+                                <input type="text" id="circleX" />
+                                </label>
+                                <label>Позиция по Y
+                                    <input type="text" id="circleY" />
+                                </label>
+                            </div>
+                            <div class="triangle-settings" id="triangle-block">
+                                <div class="point">
+                                    <label>Х1
+                                        <input type="text" id="triangleX1" />
+                                    </label>
+                                    <label>Y1
+                                        <input type="text" id="triangleY1" />
+                                    </label>
+                                </div>
+                                <div class="point">
+                                    <label>Х2
+                                        <input type="text" id="triangleX2" />
+                                    </label>
+                                    <label>Y2
+                                        <input type="text" id="triangleY2" />
+                                    </label>
+                                </div>
+                                <div class="point">
+                                    <label>Х3
+                                        <input type="text" id="triangleX3" />
+                                    </label>
+                                    <label>Y3
+                                        <input type="text" id="triangleY3" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="rectangle-settings" id="rectangle-block">
+                                <div class="point">
+                                    <label>Х1
+                                        <input type="text" id="rectangleX1" />
+                                    </label>
+                                    <label>Y1
+                                        <input type="text" id="rectangleY1" />
+                                    </label>
+                                </div>
+                                <div class="point">
+                                    <label>Х2
+                                        <input type="text" id="rectangleX2" />
+                                    </label>
+                                    <label>Y2
+                                        <input type="text" id="rectangleY2" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="info" id="info-block"></div>
+                </div>
+                <div class="draw-area">
+                    <canvas class="canvas" width="850" height="550" id="canvas"></canvas>
+                </div>
+            </div>
+        <script type="text/javascript" src="js/Shape.js"></script>
+        <script type="text/javascript" src="js/Circle.js"></script>
+        <script type="text/javascript" src="js/Triangle.js"></script>
+        <script type="text/javascript" src="js/Rectangle.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 </html>

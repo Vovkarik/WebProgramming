@@ -1,6 +1,3 @@
-/**
- * Created by Vovka on 19.02.2017.
- */
 function Shape()
 {
     this.fillColor = "#FF0000";
